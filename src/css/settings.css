@@ -1,0 +1,17 @@
+/* === Settings === */
+:root {
+  /* Colors */
+  --black-color: #1f1717;
+  --white-color: #f0f0f5;
+  
+  /* Font-Size */
+  --font-size-12: 12px;
+  --font-size-14: 14px;
+  --font-size-16: 16px;
+  --font-size-18: 18px;
+  --font-size-22: 22px;
+  --font-size-24: 24px;
+  --font-size-26: 26px;
+  --font-size-28: 28px;
+  --font-size-32: 32px;
+}

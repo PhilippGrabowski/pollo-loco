@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" translate="no">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./src/css/fonts.css">
+    <link rel="stylesheet" href="./src/css/settings.css">
+    <link rel="stylesheet" href="./src/css/global.css">
+    <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="./src/img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./src/img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./src/img/favicons/favicon-16x16.png">
+    <link rel="manifest" href="./src/img/favicons/site.webmanifest">
+    <link rel="mask-icon" href="./src/img/favicons/safari-pinned-tab.svg" color="#da532c">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <!-- <a href="https://www.flaticon.com/de/kostenlose-icons/sombrero" title="sombrero Icons">Sombrero Icons (Favicons) erstellt von Muhamad Ulum - Flaticon</a> -->
+    <script src="./src/js/classes/drawableObject.class.js"></script>
+    <script src="./src/js/classes/movableObject.class.js"></script>
+    <script src="./src/js/classes/coin.class.js"></script>
+    <script src="./src/js/classes/bottle.class.js"></script>
+    <script src="./src/js/classes/character.class.js"></script>
+    <script src="./src/js/classes/chicken.class.js"></script>
+    <script src="./src/js/classes/jumpingChicken.class.js"></script>
+    <script src="./src/js/classes/endboss.class.js"></script>
+    <script src="./src/js/classes/cloud.class.js"></script>
+    <script src="./src/js/classes/background_object.class.js"></script>
+    <script src="./src/js/classes/keyboard.class.js"></script>
+    <script src="./src/js/classes/level.class.js"></script>
+    <script src="./src/js/levels/level1.js"></script>
+    <script src="./src/js/classes/statusbar.class.js"></script>
+    <script src="./src/js/classes/status.class.js"></script>
+    <script src="./src/js/classes/throwableObject.class.js"></script>
+    <script src="./src/js/classes/world.class.js"></script>
+    <script src="./src/js/game.js"></script>
+    <title>El Pollo Loco</title>
+</head>
+
+<body class="flex-column" onload="loadMobileControlEvents()">
+
+    <h1>El Pollo Loco</h1>
+    <section id="content" class="grid">
+        <div id="start_screen" class="intro">
+            <img src="./src/img/9_intro_outro_screens/start/startscreen_1.png" alt="">
+            <i class='bx bx-play-circle curser' onclick="startGame()"></i>
+        </div>
+        <canvas id="canvas" width="720" height="480"></canvas>
+        <div id="end_screen" class="intro d-none">
+            <img id="win_game" class="d-none" src="./src/img/9_intro_outro_screens/game_over/game over.png" alt="">
+            <img id="lose_game" class="d-none" src="./src/img/9_intro_outro_screens/game_over/you lost.png" alt="">
+            <button class="grid curser" onclick="restart()">Restart</button>
+        </div>
+        <div id="option_container" class="flex-row">
+            <i id="fullscreen_option" class='bx bx-fullscreen curser' onclick="toggleFullscreen()"></i>
+            <i id="mute_control" class='bx bx-volume-full curser' onclick="mute()"></i>
+        </div>
+        <div id="control_mobile">
+            <div class="control_left_menu flex-row">
+                <div id="btnLeft" class="control">
+                    <i class='bx bx-chevron-left'></i>
+                </div>
+                <div id="btnRight" class="control">
+                    <i class='bx bx-chevron-right'></i>
+                </div>
+            </div>
+            <div class="control_right_menu flex-row">
+                <div id="btnUp" class="control">
+                    <i class='bx bx-chevron-up'></i>
+                </div>
+                <div id="btnThrow" class="control grid">
+                    <span id="mobile_control_menu_b">B</span>
+                </div>
+            </div>
+        </div>
+        <div id="rotate-device">
+            <i class='bx bx-mobile-landscape'></i>
+            <span>Please Rotate Device to Landscape Mode to Enjoy the full experience !</span>
+        </div>
+    </section>
+    <section id="control_menu" class="flex-row">
+        <div class="control_left_menu flex-row">
+            <div class="control flex-row">
+                <i class='bx bx-chevron-left'></i>
+                <span>Move Left</span>
+            </div>
+            <div class="control flex-row">
+                <i class='bx bx-chevron-right'></i>
+                <span>Move Right</span>
+            </div>
+        </div>
+        <div class="control_right_menu flex-row">
+            <div class="control flex-row">
+                <i class='bx bx-chevron-up'></i>
+                <span>Jump</span>
+            </div>
+            <div class="control flex-row">
+                <span id="control_menu_b">B</span>
+                <span>Throw bottle</span>
+            </div>
+        </div>
+    </section>
+
+
+</body>
+
+</html>
